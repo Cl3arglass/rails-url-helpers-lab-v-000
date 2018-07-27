@@ -1,4 +1,4 @@
-require 'pry'
+
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :activate]
 
@@ -11,7 +11,9 @@ class StudentsController < ApplicationController
   end
 
   def activate
-     binding.pry
+     @student.active = true
+     @student.save
+     redirect_to student_path(@student)
   end
 
   private
