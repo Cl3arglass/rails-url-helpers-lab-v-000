@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  require pry
   before_action :set_student, only: [:show, :activate]
 
   def index
