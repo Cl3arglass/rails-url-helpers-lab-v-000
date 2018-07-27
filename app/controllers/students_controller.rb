@@ -6,7 +6,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    puts set_student.active
+  
   end
 
   private
